@@ -1,12 +1,13 @@
+<#import "/spring.ftl" as spring/>
 <!DOCTYPE HTML>
-<html xmlns:th="http://www.thymeleaf.org">
+<html>
 <head>
     <title>Блог</title>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-eOJMYsd53ii+scO/bJGFsiCZc+5NDVN2yr8+0RDqr0Ql0h+rP48ckxlpbzKgwra6" crossorigin="anonymous">
+    <#include "*/integra.ftl" parse = true>
 </head>
 <body>
-<header th:insert = "Header/heder :: header"></header>
 <div class = container mt-5 mb - 2>
     <h1>Добавление записи</h1>
     <form method="post">
@@ -17,6 +18,5 @@
     </form>
 </div>
 
-<div th:insert = "Header/footer :: footer"></div>
 </body>
 </html>

@@ -1,23 +1,12 @@
-
 <!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:th="https://www.thymeleaf.org"
-      xmlns:sec="https://www.thymeleaf.org/thymeleaf-extras-springsecurity3">
+<html>
 <head>
   <meta charset="utf-8">
   <title>Log in with your account</title>
 </head>
 
 <body>
-<authorize access="isAuthenticated()">
-  <% response.sendRedirect("/"); %>
-</authorize>
 <div>
-  <div th:if="${param.error}">
-    Invalid username and password.
-  </div>
-  <div th:if="${param.logout}">
-    You have been logged out.
-  </div>
   <form method="POST" action="/login">
     <h2>Вход в систему</h2>
     <div>
