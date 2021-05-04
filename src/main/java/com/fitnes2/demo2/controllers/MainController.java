@@ -1,5 +1,6 @@
 package com.fitnes2.demo2.controllers;
 
+import com.fitnes2.demo2.configure_securityWeb.WebSecurityConfig;
 import com.fitnes2.demo2.java_classes.Authorize_proverka;
 import com.fitnes2.demo2.model.Role;
 import com.fitnes2.demo2.repositoryes.RoleRepository;
@@ -15,15 +16,21 @@ import javax.servlet.http.HttpServletRequest;
 public class MainController {
     @Autowired
     RoleRepository roleRepository;
+    @Autowired
+    WebSecurityConfig web;
+    private String username;
+
     @GetMapping("/")
     public String home( Model model) {
-        model.addAttribute("title", "Главная страница");
+        username = web.getCurrentUsername();
+        model.addAttribute("username", username);
         return "home";
     }
 
     @GetMapping("/home")
     public String home_1( Model model) {
-        model.addAttribute("title", "Главная страница");
+        username = web.getCurrentUsername();
+        model.addAttribute("username", username);
         return "home";
     }
 

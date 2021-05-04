@@ -10,7 +10,7 @@
 </head>
 <@integra.sidebar>
 <body>
-<h1 class="red_text"> Red text </h1>
+<h1 class="red_text"> ${username} </h1>
 <#include "*/Header/footer.ftl" parse = true>
 </body>
 </@integra.sidebar>

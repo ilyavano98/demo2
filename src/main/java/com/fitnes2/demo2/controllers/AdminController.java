@@ -1,5 +1,6 @@
 package com.fitnes2.demo2.controllers;
 
+import com.fitnes2.demo2.configure_securityWeb.WebSecurityConfig;
 import com.fitnes2.demo2.model.Model_stat;
 import com.fitnes2.demo2.model.User;
 import com.fitnes2.demo2.repositoryes.UserRepository;
@@ -21,6 +22,9 @@ public class AdminController {
     private AdminService ad_userService;
     @Autowired
     private UserRepository userRepository;
+    @Autowired
+    WebSecurityConfig web;
+    private String username;
 
     @GetMapping("/admin")
     public String userList(Model model) {

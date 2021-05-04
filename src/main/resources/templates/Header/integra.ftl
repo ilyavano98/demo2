@@ -10,14 +10,15 @@
         <nav class="d-inline-flex mt-2 mt-md-0 ms-md-auto">
             <a class="me-3 py-2 text-dark text-decoration-none" href="#">Программа</a>
             <a class="me-3 py-2 text-dark text-decoration-none" href="#">Время</a>
-            <a class="me-3 py-2 text-dark text-decoration-none" href="/support/support_new_Post">Добавить статью</a>
+            <a class="me-3 py-2 text-dark text-decoration-none" href="/support_new_Post">Добавить статью</a>
             <a class="me-3 py-2 text-dark text-decoration-none" href="/support">Поддержка</a>
-            <#if error??>
-                <a class="me-3 py-2 text-dark text-decoration-none href="/login">Войти</a>
-                <a class="me-3 py-2 text-dark text-decoration-none href="/registration">Зарегистрироваться</a>
+            <#if username == "anonymousUser">
+                <a class="me-3 py-2 text-dark text-decoration-none" href="/login">Войти</a>
+                <a class="me-3 py-2 text-dark text-decoration-none" href="/registration">Зарегистрироваться</a>
             <#else>
-                <form action="logout" method="post" class="e-3 py-1">
-                    <button class="text-dark text-decoration-none btn" href="/" value="Sign Out">Выйти</button>
+                <form action="/logout" method="post" class="me-3 py-2 text-dark text-decoration-none">
+                    <button class="text-dark text-decoration-none btn" value="Sign Out">Выйти</button>
+                    <!--<input type = "submit" class="me-3 py-2 text-dark text-decoration-none" value="Sign Out"/>-->
                 </form>
             </#if>
 

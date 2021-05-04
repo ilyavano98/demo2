@@ -4,7 +4,15 @@
   <meta charset="utf-8">
   <title>Log in with your account</title>
 </head>
-
+<#if RequestParameters.error??>
+    <div class="alert alert-danger" align="center">
+      <strong>Invalid Login!</strong><br>Invalid username or password
+    </div>
+<#elseif RequestParameters.logout??>
+    <div class="alert alert-info" align="center">
+      <strong>Logged out!</strong><br>You have Logged out of Loanstar
+    </div>
+</#if>
 <body>
 <div>
   <form method="POST" action="/login">

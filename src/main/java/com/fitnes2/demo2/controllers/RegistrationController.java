@@ -1,5 +1,6 @@
 package com.fitnes2.demo2.controllers;
 
+import com.fitnes2.demo2.configure_securityWeb.WebSecurityConfig;
 import com.fitnes2.demo2.model.Model_stat;
 import com.fitnes2.demo2.model.User;
 import com.fitnes2.demo2.repositoryes.Model_stat_Repository;
@@ -21,6 +22,9 @@ public class RegistrationController {
 
     @Autowired
     private UserService userService;
+    @Autowired
+    WebSecurityConfig web;
+    private String username;
 
     @GetMapping("/registration")
     public String registration(Model model) {
