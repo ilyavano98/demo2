@@ -14,14 +14,14 @@
 </head>
 <@integra.sidebar>
 <body>
-<h1 class="red_text"> ${username} </h1>
-<a href="#" <button aria-label="Привет, я твоя ссылка!"data-microtip-position="bottom-right" role="tooltip">Ссылка</a>
-<button aria-label="Привет, я твоя кнопка!"data-microtip-position="bottom-right" role="tooltip">я кнопка</button>
-<menu>
-  <command onclick="alert('Первая команда')"  label="Первая команда"/>
-  <command onclick="alert('Вторая команда')" label="Вторая команда"/>
-</menu>
-<#include "*/Header/footer.ftl" parse = true>
+    <div class = "alert alert-info mt-2">
+        <#list exercises as el>
+            <h3>${el.title}</h3>
+            <p>${el.anons}</p>
+            <a href="/training_exercises/${el.id}" class="btn btn-warning">Детальнее</a>
+        </#list>
+    </div>
+    <#include "*/Header/footer.ftl" parse = true>
 </body>
 </@integra.sidebar>
 </html>

@@ -12,13 +12,13 @@
 <body>
 <div class = container mt-5 mb-20 >
     <div class = "alert alert-info mt-2">
-    <#list modelstat as el>
+    <#list training as el>
         <h1>${el.title}</h1>
         <p>${el.anons}</p>
         <p>${el.full_text}</p>
-        <p><b>Просмотры:</b> ${el.views}<p/>
-        <a href="/support/${el.id}/edit" class="btn btn-success">Редактировать</a>
-        <a href="/support/${el.id}/delete" class="btn btn-success">Удалить</a>
+        <#list images_list as img>
+            <img src = "/images/${img.name}" width="500" height="400" role="img"/>
+        </#list>
     </#list>
     </div>
 </div>

@@ -30,7 +30,7 @@
 <script type="text/javascript" src="/js/sidebars.js"></script>
     <div id="mySidenav" class="sidenav">
         <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#">Упражнения</a>
+        <a href="/training_exercises">Упражнения</a>
         <a href="#">Планирование</a>
         <a href="#">Статистика</a>
         <a href="#">Сервис</a>
